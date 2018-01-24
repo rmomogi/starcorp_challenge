@@ -27,13 +27,13 @@
 		}
 
 		public function validation($number){
-			$message = '';
+			$message = "$number";
 			foreach($this->dividers as $divider){
 				$value = $divider->validation($number);
 				$message = is_null($value) ? $message : $value;
 			}
 
-			echo $number.' = '.$message.PHP_EOL;
+			echo $message.PHP_EOL;
 		}
 
 	}
